@@ -19,18 +19,18 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-background border-b sticky top-0 z-50">
+    <header className="glass-nav sticky top-0 z-50">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">ProMedixEMS</span>
-            <div className="h-10 w-auto flex items-center">
+            <div className="h-14 w-auto flex items-center">
               <Image
                 src="/images/ProMedixEMSLOGO.png"
                 alt="ProMedixEMS Logo"
-                width={180}
-                height={40}
-                className="h-10 w-auto"
+                width={240}
+                height={56}
+                className="h-14 w-auto"
                 priority
               />
             </div>
@@ -71,16 +71,16 @@ export function Navbar() {
       {mobileMenuOpen && (
         <div className="lg:hidden" role="dialog" aria-modal="true">
           <div className="fixed inset-0 z-50"></div>
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-border">
+          <div className="glass-card fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm">
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
                 <span className="sr-only">ProMedixEMS</span>
                 <Image
                   src="/images/ProMedixEMSLOGO.png"
                   alt="ProMedixEMS Logo"
-                  width={160}
-                  height={36}
-                  className="h-9 w-auto"
+                  width={200}
+                  height={48}
+                  className="h-12 w-auto"
                 />
               </Link>
               <button
