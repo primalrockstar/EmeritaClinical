@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -24,7 +25,14 @@ export function Navbar() {
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">ProMedixEMS</span>
             <div className="h-10 w-auto flex items-center">
-              <span className="text-2xl font-bold text-foreground">ProMedixEMS</span>
+              <Image
+                src="/images/ProMedixEMSLOGO.png"
+                alt="ProMedixEMS Logo"
+                width={180}
+                height={40}
+                className="h-10 w-auto"
+                priority
+              />
             </div>
           </Link>
         </div>
@@ -67,7 +75,13 @@ export function Navbar() {
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
                 <span className="sr-only">ProMedixEMS</span>
-                <span className="text-xl font-bold">ProMedixEMS</span>
+                <Image
+                  src="/images/ProMedixEMSLOGO.png"
+                  alt="ProMedixEMS Logo"
+                  width={160}
+                  height={36}
+                  className="h-9 w-auto"
+                />
               </Link>
               <button
                 type="button"
