@@ -24,7 +24,7 @@ export default function ForProgramsPage() {
                 <Link href="/contact">Schedule a Demo</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="/pricing">View Pricing</Link>
+                <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
           </div>
@@ -254,7 +254,7 @@ export default function ForProgramsPage() {
                 <Link href="/contact">Schedule Demo</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="/pricing">View Program Pricing</Link>
+                <Link href="/contact">Contact Us for Pricing</Link>
               </Button>
             </div>
           </div>

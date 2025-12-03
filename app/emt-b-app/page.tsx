@@ -215,7 +215,7 @@ export default function EMTBAppPage() {
                 Download Now
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="/pricing">View Pricing</Link>
+                <Link href="/landing">View Pricing</Link>
               </Button>
             </div>
           </div>

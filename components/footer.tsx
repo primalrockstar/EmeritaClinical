@@ -3,7 +3,8 @@ import Link from "next/link"
 const navigation = {
   product: [
     { name: "Suite", href: "/suite" },
-    { name: "Pricing", href: "/pricing" },
+    { name: "Suite", href: "/suite" },
+    { name: "Apps", href: "/apps" },
     { name: "EMT-B App", href: "/emt-b-app" },
     { name: "For Programs", href: "/for-programs" },
   ],

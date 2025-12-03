@@ -20,8 +20,8 @@ export default function CheckoutButton({ priceId, label = "Buy Now", className }
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           priceId,
-          successUrl: window.location.origin + "/pricing?success=true",
-          cancelUrl: window.location.origin + "/pricing?canceled=true",
+          successUrl: window.location.origin + "/landing?success=true",
+          cancelUrl: window.location.origin + "/landing?canceled=true",
         }),
       })
       const data = await res.json()
