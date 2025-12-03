@@ -42,7 +42,7 @@ export default function LandingPage() {
               </h1>
               <p className="mx-auto max-w-2xl text-xl font-medium text-blue-100 md:text-2xl">
                 EMT-B Core with 45 chapters, ChapterFlashEMT spaced repetition, and PCR Trainer Pro. <br className="hidden sm:block" />
-                <span className="text-white">Everything you need to reinforce classroom learning and build real skills.</span>
+                <span className="text-white">Everything you need to reinforce classroom learning, build real skills, and pass the NREMT.</span>
               </p>
             </div>
 
