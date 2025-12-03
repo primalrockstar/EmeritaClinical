@@ -2,7 +2,6 @@
   {
     "id": "emt-b",
     "name": "Core EMT",
-  "logo": "/images/EmeritaClinicallogo.png",
     "status": "available",
     "description": "Comprehensive EMT-B study and practice app for students and programs.",
     "features": [
@@ -19,7 +18,6 @@
   {
     "id": "aemt",
     "name": "Advance AEMT",
-  "logo": "/images/EmeritaClinicallogo.png",
   "status": "coming_soon",
     "description": "Advanced EMT app with expanded content and practice tools.",
     "features": [
@@ -34,7 +32,6 @@
   {
     "id": "paramedic",
     "name": "Paramedic Elite",
-  "logo": "/images/EmeritaClinicallogo.png",
   "status": "coming_soon",
     "description": "Paramedic-level app for advanced EMS education.",
     "features": [
@@ -50,7 +47,6 @@
   {
     "id": "medicationsx",
     "name": "MedicationsX",
-    "logo": "/images/medX.png",
   "status": "coming_soon",
   "description": "Essential EMS pharmacology, dosing reference, and quick-drug guides releasing with the 2026 suite.",
     "features": [
@@ -65,7 +61,6 @@
   {
     "id": "flashlearn",
     "name": "FlashLearn",
-    "logo": "/images/flashlearn.png",
   "status": "coming_soon",
   "description": "Fast, focused spaced-repetition flashcards tailored for EMS students, slated for App Store and Google Play in 2026.",
     "features": [
@@ -80,7 +75,6 @@
   {
     "id": "rhythmlab",
     "name": "RhythmLab",
-    "logo": "/images/rhythmlab.png",
     "status": "coming_soon",
     "description": "Master ECG interpretation, one rhythm at a time.",
     "features": [

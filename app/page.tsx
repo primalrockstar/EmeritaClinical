@@ -1,8 +1,8 @@
-import Image from "next/image"
 import Link from "next/link"
 import apps from "@/data/apps.json"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { LogoWordmark } from "@/components/logo-wordmark"
 import {
   Activity,
   Apple,
@@ -21,7 +21,6 @@ type AppStatus = "available" | "coming_soon"
 type AppEntry = {
   id: string
   name: string
-  logo: string
   status: AppStatus
   description: string
   features: string[]
@@ -170,14 +169,13 @@ export default function Home() {
               </CardHeader>
               <CardContent className="flex flex-wrap items-center gap-6">
                 {flagshipApps.map((app) => (
-                  <Image
+                  <LogoWordmark
                     key={app.id}
-                    src={app.logo}
-                    alt={`${app.name} logo`}
-                    width={200}
-                    height={80}
-                    className="h-14 w-auto object-contain drop-shadow-lg"
-                    priority={app.id === "emt-b"}
+                    align="center"
+                    size="md"
+                    subtitle={app.name.toUpperCase()}
+                    glow={app.status === "available"}
+                    className="min-w-[160px]"
                   />
                 ))}
               </CardContent>
@@ -279,12 +277,11 @@ export default function Home() {
             <Card key={app.id} className="border-white/10">
               <CardHeader className="space-y-4">
                 <div className="flex items-center justify-between gap-4">
-                  <Image
-                    src={app.logo}
-                    alt={`${app.name} logo`}
-                    width={200}
-                    height={80}
-                    className="h-12 w-auto object-contain"
+                  <LogoWordmark
+                    align="left"
+                    size="md"
+                    subtitle={app.name.toUpperCase()}
+                    glow={app.status === "available"}
                   />
                   <span className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold ${statusStyles[app.status as AppStatus]?.className}`}>
                     {statusStyles[app.status as AppStatus]?.label ?? "In development"}

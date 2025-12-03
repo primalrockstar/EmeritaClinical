@@ -2,8 +2,8 @@ import { ReactNode } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
-import Image from "next/image"
 import { Apple, FileText, Mic, Play } from "lucide-react"
+import { LogoWordmark } from "@/components/logo-wordmark"
 
 type CardStatus = "launch" | "dev"
 
@@ -15,9 +15,7 @@ type SuiteCard = {
   badge: string
   status: CardStatus
   features: string[]
-  logo?: string
-  logoWidth?: number
-  logoHeight?: number
+  logoSlot?: ReactNode
   icon?: ReactNode
   primaryCta?: { label: string; href: string }
   secondaryCta?: { label: string; href: string }
@@ -38,7 +36,7 @@ const primaryTracks: SuiteCard[] = [
     badge: "APP STORE + GOOGLE PLAY · 2026",
     status: "launch",
     features: ["Adaptive learning paths", "Instructor & cohort dashboards"],
-  logo: "/images/EmeritaClinicallogo.png",
+    logoSlot: <LogoWordmark align="center" size="lg" subtitle="EMT-B CORE" glow />,
     primaryCta: { label: "Learn more", href: "/suite#emt-core" },
     secondaryCta: { label: "Request EMT-B demo", href: "mailto:demo@webconnect360.com" },
   },
@@ -51,7 +49,7 @@ const primaryTracks: SuiteCard[] = [
     badge: "IN DEVELOPMENT · INTERNAL BUILDS",
     status: "dev",
     features: ["Scenario labs", "Competency matrix tracking"],
-  logo: "/images/EmeritaClinicallogo.png",
+    logoSlot: <LogoWordmark align="center" size="lg" subtitle="AEMT" />,
     primaryCta: { label: "Learn more", href: "/suite#aemt" },
     secondaryCta: { label: "Join waitlist", href: "/contact?type=waitlist" },
   },
@@ -64,7 +62,7 @@ const primaryTracks: SuiteCard[] = [
     badge: "IN DEVELOPMENT · INTERNAL BUILDS",
     status: "dev",
     features: ["Telemetry-ready modules", "Preceptor tools & ALS algorithms"],
-  logo: "/images/EmeritaClinicallogo.png",
+    logoSlot: <LogoWordmark align="center" size="lg" subtitle="PARAMEDIC" />,
     primaryCta: { label: "Learn more", href: "/suite#paramedic" },
     secondaryCta: { label: "Join waitlist", href: "/contact?type=waitlist" },
   },
@@ -93,9 +91,11 @@ const platformCards: SuiteCard[] = [
     badge: "IN DEVELOPMENT · INTERNAL BUILDS",
     status: "dev",
     features: ["Spaced repetition engine", "Offline-ready study mode"],
-    logo: "/images/flashlearn.png",
-    logoWidth: 160,
-    logoHeight: 60,
+    logoSlot: (
+      <span className="text-3xl font-black tracking-tight text-amber-200 drop-shadow-[0_6px_25px_rgba(250,204,21,0.55)]">
+        Flashcards
+      </span>
+    ),
     primaryCta: { label: "Learn more", href: "/suite#flashcards" },
     secondaryCta: { label: "Join waitlist", href: "/contact?type=waitlist" },
   },
@@ -137,19 +137,7 @@ function SuiteCardTile({ card }: { card: SuiteCard }) {
   return (
     <Card className="glass-card hover:shadow-xl transition-all duration-300 hover:scale-[1.01] border border-white/5">
       <CardHeader className="space-y-4">
-        {card.logo ? (
-          <Image
-            src={card.logo}
-            alt={`${card.title} logo`}
-            width={card.logoWidth ?? 220}
-            height={card.logoHeight ?? 90}
-            className="h-16 w-auto object-contain drop-shadow-lg"
-            sizes="(max-width: 768px) 160px, 220px"
-            priority={card.status === "launch"}
-          />
-        ) : (
-          <div>{card.icon}</div>
-        )}
+        {card.logoSlot ? <div className="flex justify-center">{card.logoSlot}</div> : card.icon ? <div>{card.icon}</div> : null}
         <div className="space-y-1">
           <CardTitle className="text-2xl">{card.title}</CardTitle>
           <p className="text-sm text-muted-foreground">{card.tagline}</p>

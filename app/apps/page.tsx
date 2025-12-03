@@ -3,6 +3,7 @@ import path from "path";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { LogoWordmark } from "@/components/logo-wordmark";
 
 const appsDataPath = path.join(process.cwd(), "data", "apps.json");
 const apps = JSON.parse(fs.readFileSync(appsDataPath, "utf-8"));
@@ -54,17 +55,9 @@ export default function AppsPage() {
 
           return (
             <Card key={app.id} className="glass-card p-6 flex flex-col">
-              {app.logo && (
-                <div className="flex justify-center mb-4">
-                  <Image
-                    src={app.logo}
-                    alt={`${app.name} logo`}
-                    width={220}
-                    height={80}
-                    className="h-16 w-auto object-contain drop-shadow-lg"
-                  />
-                </div>
-              )}
+              <div className="flex justify-center mb-4">
+                <LogoWordmark align="center" size="md" subtitle={app.name.toUpperCase()} glow={status.label === "Available"} />
+              </div>
               <h2 className="text-2xl font-semibold text-center">{app.name}</h2>
               <p className="mb-4 text-muted-foreground text-center">{app.description}</p>
               <div className="mb-4 flex justify-center">

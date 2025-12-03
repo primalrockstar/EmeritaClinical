@@ -1,10 +1,10 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { LogoWordmark } from "@/components/logo-wordmark"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -23,18 +23,9 @@ export function Navbar() {
     <header className="glass-nav sticky top-0 z-50">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">EmeritaClinical™</span>
-            <div className="h-20 w-auto flex items-center">
-              <Image
-                src="/images/EmeritaClinicallogo.png"
-                alt="EmeritaClinical™ Logo"
-                width={320}
-                height={80}
-                className="h-20 w-auto"
-                priority
-              />
-            </div>
+          <Link href="/" className="-m-1.5 p-1.5" aria-label="EmeritaClinical home">
+            <LogoWordmark className="hidden sm:inline-flex" size="lg" glow subtitle="EMS PLATFORM" />
+            <LogoWordmark className="sm:hidden" size="sm" glow subtitle="EMS" />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -74,15 +65,8 @@ export function Navbar() {
           <div className="fixed inset-0 z-50"></div>
           <div className="glass-card fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm">
             <div className="flex items-center justify-between">
-              <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
-                <span className="sr-only">EmeritaClinical™</span>
-                <Image
-                  src="/images/EmeritaClinicallogo.png"
-                  alt="EmeritaClinical™ Logo"
-                  width={260}
-                  height={64}
-                  className="h-16 w-auto"
-                />
+              <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)} aria-label="EmeritaClinical home">
+                <LogoWordmark size="sm" subtitle="EMS" glow />
               </Link>
               <button
                 type="button"
