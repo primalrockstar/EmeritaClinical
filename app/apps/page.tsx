@@ -50,7 +50,7 @@ export default function AppsPage() {
           <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground">Stripe-powered releases</p>
           <h1 className="mt-4 text-4xl font-bold">EmeritaClinical™ EMS Apps</h1>
           <p className="mt-4 text-muted-foreground md:text-lg">
-            The EmeritaClinical™ suite lives here: EMT-B Core, ChapterFlashEMR, and PCR Trainer PRO—all $29 one-time purchases with direct Stripe delivery.
+            The EmeritaClinical™ suite lives here: EMT-B Core, ChapterFlashEMT, and PCR Trainer PRO—all $29 one-time purchases with direct Stripe delivery.
           </p>
           <p className="text-muted-foreground">
             Built by EMS student Shaun Williamson with neon-glass polish, each module enhances accredited programs with flashcards, documentation labs, and competency-mapped drills.

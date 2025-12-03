@@ -20,12 +20,12 @@
   },
   {
     "id": "chapterflash-emt",
-    "name": "ChapterFlash EMR",
-    "shortName": "ChapterFlashEMR",
+    "name": "ChapterFlash EMT",
+    "shortName": "ChapterFlashEMT",
     "tier": "extension",
     "status": "available",
-  "tagline": "Intelligent spaced-repetition flashcards synced for EMR + EMT-B refreshers.",
-  "description": "700+ cards with spaced repetition so EMS students can hammer through weak spots faster than paper decks.",
+    "tagline": "Intelligent spaced-repetition flashcards synced for EMT-B.",
+    "description": "700+ cards with spaced repetition so EMT students can hammer through weak spots faster than paper decks.",
     "price": 29,
     "badge": "Flashcards engine",
     "features": [

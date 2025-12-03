@@ -49,7 +49,7 @@ const pricingTiers = [
     title: "Single Tool",
     price: "$29",
     subtext: "/ app",
-  description: "Choose EMT-B Core, ChapterFlashEMR, or PCR Trainer PRO.",
+    description: "Choose EMT-B Core, ChapterFlashEMT, or PCR Trainer PRO.",
     features: ["Lifetime access", "Offline ready", "Email receipt via Stripe"],
     cta: { label: "Select your app", href: "#live-apps", variant: "outline" as const },
   },
@@ -60,7 +60,7 @@ const pricingTiers = [
     original: "$49",
     price: "$36.75",
     subtext: "one-time (use code HOLIDAY25)",
-  description: "Bundle EMT-B Core + ChapterFlashEMR + PCR Trainer PRO.",
+    description: "Bundle EMT-B Core + ChapterFlashEMT + PCR Trainer PRO.",
     features: ["3 premium tools", "Promo code ready", "Instant Stripe delivery"],
     cta: { label: "Buy full bundle", href: "https://buy.stripe.com/3cI9AU6C5el619cat28k802" },
   },
@@ -85,7 +85,7 @@ export default function SuitePage() {
             The EmeritaClinical EMS ecosystem, neon and Stripe-connected.
           </h1>
           <p className="max-w-3xl text-muted-foreground md:text-lg">
-            EMT-B Core, ChapterFlashEMR, and PCR Trainer PRO are the live lineup, each sold as a $29 Stripe download on EmeritaClinical.com. MedicationsEMS plus the AEMT and Paramedic tracks are actively in build for web delivery only—no App Store or Google Play releases.
+            EMT-B Core, ChapterFlashEMT, and PCR Trainer PRO are the live lineup, each sold as a $29 Stripe download on EmeritaClinical.com. MedicationsEMS plus the AEMT and Paramedic tracks are actively in build for web delivery only—no App Store or Google Play releases.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Button asChild size="lg">
