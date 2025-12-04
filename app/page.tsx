@@ -111,43 +111,43 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-16 pb-20">
-      <section className="relative overflow-hidden hero-gradient grid-overlay py-16 md:py-24 lg:py-32">
+      <section className="relative overflow-hidden hero-silhouette grid-overlay py-16 md:py-24 lg:py-32">
         <div className="container relative z-10 mx-auto grid gap-10 px-4 md:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-[11px] uppercase tracking-[0.4em] text-muted-foreground">
-              <span className="text-primary">EmeritaClinical™</span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-[11px] uppercase tracking-[0.4em] text-white/80">
+              <span className="text-white">EmeritaClinical™</span>
               Platform
             </div>
             <div className="space-y-5">
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
                 Enterprise Platforms for Clinical Education & Research
               </h1>
-              <p className="max-w-2xl text-lg text-muted-foreground md:text-xl">
+              <p className="max-w-2xl text-lg text-white/90 md:text-xl">
                 EmeritaClinical™ delivers professional-grade learning platforms for EMS education. EMT-B Core, ChapterFlashEMT, and PCR Report Sim are available now with enterprise licensing options for institutions and programs.
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg" className="px-8 text-base">
+              <Button asChild size="lg" className="px-8 text-base bg-white text-navy-900 hover:bg-white/90">
                 <Link href="#ems-suite" className="flex items-center gap-2">
                   Shop the EMS suite
                   <ArrowUpRight className="h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-white/30 px-8 text-base">
+              <Button asChild variant="outline" size="lg" className="border-white/30 px-8 text-base text-white hover:bg-white/10">
                 <Link href="/contact">Request a program preview</Link>
               </Button>
             </div>
-            <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
+            <div className="flex flex-wrap gap-6 text-sm text-white/80">
               {heroStats.map((stat) => (
                 <div key={stat.label} className="space-y-1">
-                  <p className="text-3xl font-semibold text-foreground">{stat.value}</p>
+                  <p className="text-3xl font-semibold text-white">{stat.value}</p>
                   <p>{stat.label}</p>
                 </div>
               ))}
             </div>
           </div>
           <div className="space-y-6">
-            <Card className="border-white/10">
+            <Card className="glass-card border-white/20 bg-white/95 backdrop-blur-xl">
               <CardHeader className="space-y-3">
                 <CardTitle className="flex items-center gap-2 text-xl">
                   <Sparkles className="h-5 w-5 text-primary" />
