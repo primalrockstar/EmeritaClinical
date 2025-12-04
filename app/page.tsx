@@ -137,14 +137,6 @@ export default function Home() {
                 <Link href="/contact">Request a program preview</Link>
               </Button>
             </div>
-            <div className="flex flex-wrap gap-6 text-sm text-white/80">
-              {heroStats.map((stat) => (
-                <div key={stat.label} className="space-y-1">
-                  <p className="text-3xl font-semibold text-white">{stat.value}</p>
-                  <p>{stat.label}</p>
-                </div>
-              ))}
-            </div>
           </div>
           <div className="space-y-6">
             <Card className="glass-card border-white/20 bg-white/95 backdrop-blur-xl">
