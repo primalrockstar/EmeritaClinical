@@ -295,66 +295,68 @@ export default function Home() {
       </section>
 
       {/* Enterprise Platform Section */}
-      <section className="container mx-auto space-y-8 px-4 md:px-6">
-        <div className="space-y-3 text-center">
-          <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground">Enterprise Platform</p>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Research Management at Scale
-          </h2>
-          <p className="mx-auto max-w-3xl text-muted-foreground md:text-lg">
-            EmeritaCRM is our flagship enterprise research platform designed for institutions, programs, and large-scale clinical education research initiatives.
-          </p>
-        </div>
-        {enterpriseApps.map((app) => (
-          <Card key={app.id} className="glass-card border-2 border-primary/30 shadow-xl">
-            <CardContent className="grid gap-8 p-8 lg:grid-cols-[0.4fr_0.6fr] lg:items-center">
-              <div className="flex justify-center">
-                {app.logo && (
-                  <Image
-                    src={app.logo}
-                    alt={app.name}
-                    width={280}
-                    height={280}
-                    className="rounded-2xl"
-                  />
-                )}
-              </div>
-              <div className="space-y-6">
-                {app.badge && (
-                  <span className="inline-flex items-center rounded-full bg-primary/10 border border-primary/30 px-4 py-1.5 text-sm font-bold uppercase tracking-wide text-primary">
-                    {app.badge}
-                  </span>
-                )}
-                <div>
-                  <h3 className="text-3xl font-bold mb-2">{app.name}</h3>
-                  <p className="text-lg text-muted-foreground">{app.tagline}</p>
+      <section className="enterprise-silhouette overflow-hidden py-16 md:py-24">
+        <div className="container relative z-10 mx-auto space-y-8 px-4 md:px-6">
+          <div className="space-y-3 text-center">
+            <p className="text-xs uppercase tracking-[0.5em] text-white/80">Enterprise Platform</p>
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+              Research Management at Scale
+            </h2>
+            <p className="mx-auto max-w-3xl text-white/90 md:text-lg">
+              EmeritaCRM is our flagship enterprise research platform designed for institutions, programs, and large-scale clinical education research initiatives.
+            </p>
+          </div>
+          {enterpriseApps.map((app) => (
+            <Card key={app.id} className="glass-card border-2 border-white/30 bg-white/95 backdrop-blur-xl shadow-2xl">
+              <CardContent className="grid gap-8 p-8 lg:grid-cols-[0.4fr_0.6fr] lg:items-center">
+                <div className="flex justify-center">
+                  {app.logo && (
+                    <Image
+                      src={app.logo}
+                      alt={app.name}
+                      width={280}
+                      height={280}
+                      className="rounded-2xl"
+                    />
+                  )}
                 </div>
-                <p className="text-muted-foreground">{app.description}</p>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {app.features.map((feature) => (
-                    <div key={feature} className="flex items-center gap-2">
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
-                        <Check className="h-5 w-5 text-primary" />
+                <div className="space-y-6">
+                  {app.badge && (
+                    <span className="inline-flex items-center rounded-full bg-primary/10 border border-primary/30 px-4 py-1.5 text-sm font-bold uppercase tracking-wide text-primary">
+                      {app.badge}
+                    </span>
+                  )}
+                  <div>
+                    <h3 className="text-3xl font-bold mb-2">{app.name}</h3>
+                    <p className="text-lg text-muted-foreground">{app.tagline}</p>
+                  </div>
+                  <p className="text-muted-foreground">{app.description}</p>
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    {app.features.map((feature) => (
+                      <div key={feature} className="flex items-center gap-2">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
+                          <Check className="h-5 w-5 text-primary" />
+                        </div>
+                        <span className="font-semibold">{feature}</span>
                       </div>
-                      <span className="font-semibold">{feature}</span>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
+                  <div className="flex flex-wrap gap-4 pt-4">
+                    <Button asChild size="lg" className="px-8">
+                      <a href={app.previewLink} target="_blank" rel="noopener noreferrer">
+                        Explore Platform
+                        <ArrowUpRight className="ml-2 h-5 w-5" />
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" size="lg" className="px-8">
+                      <Link href="/contact">Request Enterprise Demo</Link>
+                    </Button>
+                  </div>
                 </div>
-                <div className="flex flex-wrap gap-4 pt-4">
-                  <Button asChild size="lg" className="px-8">
-                    <a href={app.previewLink} target="_blank" rel="noopener noreferrer">
-                      Explore Platform
-                      <ArrowUpRight className="ml-2 h-5 w-5" />
-                    </a>
-                  </Button>
-                  <Button asChild variant="outline" size="lg" className="px-8">
-                    <Link href="/contact">Request Enterprise Demo</Link>
-                  </Button>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </section>
 
       <section className="container mx-auto space-y-10 px-4 md:px-6">
