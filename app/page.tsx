@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import apps from "@/data/apps.json"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -18,7 +19,7 @@ import {
   type LucideIcon,
 } from "lucide-react"
 
-type AppTier = "core" | "extension" | "roadmap"
+type AppTier = "core" | "extension" | "roadmap" | "enterprise"
 type AppStatus = "available" | "coming_soon" | "in_development"
 
 type AppEntry = {
@@ -32,16 +33,19 @@ type AppEntry = {
   features: string[]
   price?: number
   badge?: string
+  logo?: string
   stripeCheckoutUrl?: string
   previewLink?: string
   bundleEligible?: boolean
 }
 
 const appsData = apps as AppEntry[]
-const flagshipIds = new Set(["emt-b", "chapterflash-emt", "pcr-trainer-pro", "emeritacrm"])
+const emsAppsIds = new Set(["emt-b", "chapterflash-emt", "pcr-trainer-pro"])
+const enterpriseAppsIds = new Set(["emeritacrm"])
 const orderedApps = [
-  ...appsData.filter((app) => flagshipIds.has(app.id)),
-  ...appsData.filter((app) => !flagshipIds.has(app.id)),
+  ...appsData.filter((app) => emsAppsIds.has(app.id)),
+  ...appsData.filter((app) => enterpriseAppsIds.has(app.id)),
+  ...appsData.filter((app) => !emsAppsIds.has(app.id) && !enterpriseAppsIds.has(app.id)),
 ]
 
 const marqueeItems = [
@@ -135,8 +139,9 @@ const statusStyles: Record<AppStatus, { label: string; className: string }> = {
 }
 
 export default function Home() {
-  const flagshipApps = orderedApps.filter((app) => flagshipIds.has(app.id))
-  const purchaseReadyApps = orderedApps.filter((app) => app.tier !== "roadmap")
+  const emsApps = orderedApps.filter((app) => emsAppsIds.has(app.id))
+  const enterpriseApps = orderedApps.filter((app) => enterpriseAppsIds.has(app.id))
+  const purchaseReadyApps = orderedApps.filter((app) => app.tier !== "roadmap" && app.tier !== "enterprise")
   const roadmapApps = orderedApps.filter((app) => app.tier === "roadmap")
 
   return (
@@ -210,20 +215,24 @@ export default function Home() {
             <Card className="border-white/10">
               <CardHeader className="space-y-2">
                 <CardTitle className="text-base uppercase tracking-[0.3em] text-muted-foreground">
-                  Flagship tracks
+                  EMS Education Suite
                 </CardTitle>
-                <CardDescription>New EmeritaClinical EMT logos showcased across the entire site.</CardDescription>
+                <CardDescription>Professional learning platforms with EmeritaClinical branding.</CardDescription>
               </CardHeader>
               <CardContent className="flex flex-wrap items-center gap-6">
-                {flagshipApps.map((app) => (
-                  <LogoWordmark
-                    key={app.id}
-                    align="center"
-                    size="md"
-                    subtitle={(app.shortName || app.name).toUpperCase()}
-                    glow={app.status === "available"}
-                    className="min-w-[160px]"
-                  />
+                {emsApps.map((app) => (
+                  app.logo && (
+                    <div key={app.id} className="flex flex-col items-center gap-2">
+                      <Image
+                        src={app.logo}
+                        alt={app.name}
+                        width={120}
+                        height={120}
+                        className="rounded-lg"
+                      />
+                      <span className="text-xs font-semibold text-muted-foreground">{app.shortName}</span>
+                    </div>
+                  )
                 ))}
               </CardContent>
             </Card>
@@ -241,13 +250,24 @@ export default function Home() {
             EmeritaClinical™ provides enterprise-grade educational tools with transparent pricing and lifetime access. No subscriptions, no hidden fees—just professional learning platforms built for EMS education.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {purchaseReadyApps.map((app) => {
             const statusStyle = statusStyles[app.status]
             const waitlistHref = `/contact?type=waitlist&app=${app.id}`
             return (
               <Card key={app.id} className="glass-card flex h-full flex-col border-white/10">
                 <CardHeader className="space-y-4">
+                  {app.logo && (
+                    <div className="flex justify-center">
+                      <Image
+                        src={app.logo}
+                        alt={app.name}
+                        width={140}
+                        height={140}
+                        className="rounded-lg"
+                      />
+                    </div>
+                  )}
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <CardTitle className="text-2xl">{app.name}</CardTitle>
@@ -319,6 +339,69 @@ export default function Home() {
             </div>
           </div>
         )}
+      </section>
+
+      {/* Enterprise Platform Section */}
+      <section className="container mx-auto space-y-8 px-4 md:px-6">
+        <div className="space-y-3 text-center">
+          <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground">Enterprise Platform</p>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Research Management at Scale
+          </h2>
+          <p className="mx-auto max-w-3xl text-muted-foreground md:text-lg">
+            EmeritaCRM is our flagship enterprise research platform designed for institutions, programs, and large-scale clinical education research initiatives.
+          </p>
+        </div>
+        {enterpriseApps.map((app) => (
+          <Card key={app.id} className="glass-card border-2 border-primary/30 shadow-xl">
+            <CardContent className="grid gap-8 p-8 lg:grid-cols-[0.4fr_0.6fr] lg:items-center">
+              <div className="flex justify-center">
+                {app.logo && (
+                  <Image
+                    src={app.logo}
+                    alt={app.name}
+                    width={280}
+                    height={280}
+                    className="rounded-2xl"
+                  />
+                )}
+              </div>
+              <div className="space-y-6">
+                {app.badge && (
+                  <span className="inline-flex items-center rounded-full bg-primary/10 border border-primary/30 px-4 py-1.5 text-sm font-bold uppercase tracking-wide text-primary">
+                    {app.badge}
+                  </span>
+                )}
+                <div>
+                  <h3 className="text-3xl font-bold mb-2">{app.name}</h3>
+                  <p className="text-lg text-muted-foreground">{app.tagline}</p>
+                </div>
+                <p className="text-muted-foreground">{app.description}</p>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {app.features.map((feature) => (
+                    <div key={feature} className="flex items-center gap-2">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10">
+                        <Check className="h-5 w-5 text-primary" />
+                      </div>
+                      <span className="font-semibold">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex flex-wrap gap-4 pt-4">
+                  <Button asChild size="lg" className="px-8">
+                    <a href={app.previewLink} target="_blank" rel="noopener noreferrer">
+                      Explore Platform
+                      <ArrowUpRight className="ml-2 h-5 w-5" />
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" size="lg" className="px-8">
+                    <Link href="/contact">Request Enterprise Demo</Link>
+                  </Button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
       </section>
 
       <section className="container mx-auto space-y-10 px-4 md:px-6">

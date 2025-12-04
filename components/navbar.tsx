@@ -26,9 +26,9 @@ export function Navbar() {
             <Image 
               src="/images/EmeritaClinicalLogo.jpeg" 
               alt="EmeritaClinical" 
-              width={180}
-              height={50}
-              className="h-12 w-auto"
+              width={280}
+              height={75}
+              className="h-16 w-auto"
               priority
             />
           </Link>

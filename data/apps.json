@@ -9,6 +9,7 @@
     "description": "Built from Shaun Williamson's original EMT-B study engine so learners can review chapters, drills, and simulations that map exactly to NREMT objectives.",
     "price": 29,
     "badge": "Flagship curriculum",
+    "logo": "/images/EmeritaclinicalEMT-b.jpeg",
     "features": [
       "41 instructor-aligned chapters",
       "Scenario + quiz mode",
@@ -28,6 +29,7 @@
     "description": "700+ cards with spaced repetition so EMT students can hammer through weak spots faster than paper decks.",
     "price": 29,
     "badge": "Flashcards engine",
+    "logo": "/images/EmeritaClinicalChapterflashlogo.jpeg",
     "features": [
       "Spaced repetition cycles",
       "700+ EMT-B prompts",
@@ -39,14 +41,15 @@
   },
   {
     "id": "pcr-trainer-pro",
-    "name": "PCR Trainer PRO",
-    "shortName": "PCR Trainer",
+    "name": "PCR Report Sim",
+    "shortName": "PCR Report Sim",
     "tier": "extension",
     "status": "available",
     "tagline": "Advanced documentation engine. Master the Patient Care Report.",
     "description": "Guided ePCR reps with QA scoring, scenario syncing, and documentation tips that feel like a live preceptor.",
     "price": 29,
     "badge": "Documentation lab",
+    "logo": "/images/EmeritaClinicalPCRSimlogo.jpeg",
     "features": [
       "Realistic ePCR workflows",
       "Automated QA scoring",
@@ -75,11 +78,12 @@
     "id": "emeritacrm",
     "name": "EmeritaClinical Research Management",
     "shortName": "EmeritaCRM",
-    "tier": "core",
+    "tier": "enterprise",
     "status": "available",
     "tagline": "Enterprise research management platform for clinical education programs.",
     "description": "Comprehensive research administration system with participant tracking, compliance monitoring, and institutional analytics for clinical research programs.",
-    "badge": "Research Platform",
+    "badge": "Enterprise Platform",
+    "logo": "/images/EmeritaClinicalRMlogo.jpeg",
     "features": [
       "Participant management",
       "Compliance tracking",
