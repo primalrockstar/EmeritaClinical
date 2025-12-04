@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle2, Server, ShieldAlert, Database, Terminal } from "lucide-react"
 
@@ -10,6 +11,14 @@ export default function EnterpriseServicesPage() {
         <div className="absolute inset-0 bg-[url('/images/emeritabackground.png')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
+            <Image 
+              src="/images/EmeritaClinicalEnterprise.png" 
+              alt="EmeritaClinical Enterprise Division" 
+              width={400} 
+              height={120} 
+              className="mb-8 h-auto w-auto max-w-[300px]"
+              priority
+            />
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
               End-to-End Modernization for Mission-Critical Systems.
             </h1>
