@@ -5,18 +5,13 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { LogoWordmark } from "@/components/logo-wordmark"
 import {
-  Activity,
   Apple,
   ArrowUpRight,
   Check,
   Clock,
-  Layers,
   Play,
-  ShieldCheck,
   ShoppingCart,
   Sparkles,
-  Users,
-  type LucideIcon,
 } from "lucide-react"
 
 type AppTier = "core" | "extension" | "roadmap" | "enterprise"
@@ -55,34 +50,6 @@ const marqueeItems = [
   "Voice-first documentation",
   "Real-time cohort analytics",
   "App + mobile parity in 2026",
-]
-
-type Pillar = {
-  title: string
-  body: string
-  points: string[]
-  Icon: LucideIcon
-}
-
-const highlightPillars: Pillar[] = [
-  {
-    title: "Accreditation-ready content",
-    body: "Every skill, medication, and scenario is mapped to EMT, AEMT, and Paramedic competencies with instructor notes built in.",
-    points: ["State + NREMT tagging", "Auto-generated lesson briefs"],
-    Icon: ShieldCheck,
-  },
-  {
-    title: "Immersive training lab",
-    body: "High-fidelity scenario labs, PCR drills, and flashcards feel like the field so learners can rehearse decisions before the call.",
-    points: ["Scenario & PCR sync", "VoiceNotes + AI summaries"],
-    Icon: Layers,
-  },
-  {
-    title: "Program intelligence",
-    body: "Live dashboards reveal cohort progress, remediation needs, and readiness signals before certification day.",
-    points: ["Cohort analytics", "Automated skill tracking"],
-    Icon: Activity,
-  },
 ]
 
 const heroStats = [
@@ -499,173 +466,6 @@ export default function Home() {
             </span>
           ))}
         </div>
-      </section>
-
-      <section className="container mx-auto px-4 md:px-6">
-        <div className="mb-10 space-y-4 text-center">
-          <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground">Designed with EMS educators</p>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Glass-card storytelling with enterprise depth
-          </h2>
-          <p className="mx-auto max-w-3xl text-muted-foreground md:text-lg">
-            Every section elevates EMS-specific storytelling—skills matrices, protocol refreshers, and cohort dashboards presented in a clear, high-contrast layout built for night crews and classroom displays alike.
-          </p>
-        </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {highlightPillars.map(({ title, body, points, Icon }) => (
-            <Card key={title} className="border-white/10">
-              <CardHeader className="space-y-4">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <div className="space-y-2">
-                  <CardTitle className="text-2xl">{title}</CardTitle>
-                  <CardDescription>{body}</CardDescription>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                {points.map((point) => (
-                  <div key={point} className="flex items-center gap-2 text-sm text-foreground">
-                    <Check className="h-4 w-4 text-primary" />
-                    <span>{point}</span>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      <section className="container mx-auto space-y-8 px-4 md:px-6">
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <div className="space-y-3">
-            <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground">Platform lineup</p>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">All apps live on this platform first</h2>
-            <p className="max-w-2xl text-muted-foreground">
-              Whether it&apos;s the EMT core curriculum, MedicationsX reference, or RhythmLab for ECG mastery, everything is
-              orchestrated inside the neon interface before it arrives on the stores in 2026.
-            </p>
-          </div>
-          <Button asChild variant="outline" className="self-start border-white/30">
-            <Link href="/suite">See the detailed suite overview</Link>
-          </Button>
-        </div>
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {orderedApps.map((app) => (
-            <Card key={app.id} className="border-white/10">
-              <CardHeader className="space-y-4">
-                <div className="flex items-center justify-between gap-4">
-                  <LogoWordmark
-                    align="left"
-                    size="md"
-                    subtitle={(app.shortName || app.name).toUpperCase()}
-                    glow={app.status === "available"}
-                  />
-                  <span className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold ${statusStyles[app.status as AppStatus]?.className}`}>
-                    {statusStyles[app.status as AppStatus]?.label ?? "In development"}
-                  </span>
-                </div>
-                <div className="space-y-2">
-                  <CardTitle>{app.name}</CardTitle>
-                  <CardDescription>{app.description}</CardDescription>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-2">
-                  {app.features.slice(0, 3).map((feature) => (
-                    <div key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-1">
-                    <Apple className="h-3.5 w-3.5" /> 2026
-                  </span>
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-1">
-                    <Play className="h-3.5 w-3.5" /> 2026
-                  </span>
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-1">
-                    🔵 Platform first
-                  </span>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      <section className="container mx-auto px-4 md:px-6">
-        <Card className="border-white/10">
-          <CardContent className="grid gap-8 p-8 md:grid-cols-[1.1fr_0.9fr] md:items-center">
-            <div className="space-y-4">
-              <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground">Availability · 2026</p>
-              <h3 className="text-3xl font-semibold">
-                Every module ships simultaneously to EmeritaClinical.com, the App Store, and Google Play.
-              </h3>
-              <p className="text-muted-foreground">
-                Programs can pilot the neon platform today, then flip the switch for learners once the stores approve the
-                builds. All data, cohorts, and scenarios stay synced.
-              </p>
-              <div className="flex flex-wrap gap-3 text-sm text-muted-foreground">
-                <span className="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-1">
-                  <Users className="h-4 w-4 text-primary" /> Student + program roles
-                </span>
-                <span className="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-1">
-                  <Sparkles className="h-4 w-4 text-secondary" /> Neon/glass UI preserved everywhere
-                </span>
-              </div>
-            </div>
-            <div className="space-y-4 rounded-2xl border border-white/10 p-6">
-              <div className="flex items-center gap-4">
-                <div className="rounded-full bg-primary/15 p-3 text-primary">
-                  <Apple className="h-6 w-6" />
-                </div>
-                <div>
-                  <p className="text-sm uppercase tracking-wide text-muted-foreground">App Store</p>
-                  <p className="text-lg font-semibold">Q1 2026 submission window</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="rounded-full bg-secondary/15 p-3 text-secondary">
-                  <Play className="h-6 w-6" />
-                </div>
-                <div>
-                  <p className="text-sm uppercase tracking-wide text-muted-foreground">Google Play</p>
-                  <p className="text-lg font-semibold">Q1 2026 beta tracks</p>
-                </div>
-              </div>
-              <div className="rounded-2xl bg-white/5 p-4 text-sm text-muted-foreground">
-                EmeritaClinical.com hosts the EMT-B Core experience today so programs can run guided demos and faculty
-                reviews while the remaining suite tracks finalize for the coordinated 2026 App Store and Google Play launches.
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </section>
-
-      <section className="container mx-auto px-4 md:px-6">
-        <Card className="border-white/10">
-          <CardContent className="flex flex-col gap-6 p-8 text-center">
-            <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground">Take action</p>
-            <h3 className="text-3xl font-bold sm:text-4xl">
-              Ready to put the neon glass platform in front of your cohort?
-            </h3>
-            <p className="mx-auto max-w-3xl text-muted-foreground md:text-lg">
-              Request a guided tour, secure branded onboarding with the new EMT logos, and lock in App Store + Google
-              Play launch notifications for 2026.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Button asChild size="lg" className="px-10 text-base">
-                <Link href="/contact">Book a walkthrough</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-white/30 px-10 text-base">
-                <Link href="/suite">Download the suite brief</Link>
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
       </section>
       </div>
   )
