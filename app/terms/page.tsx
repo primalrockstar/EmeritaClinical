@@ -2,17 +2,17 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "EmeritaClinical™ Terms of Service",
-  description: "Review the WebConnect360 LLC Terms governing use of EmeritaClinical™ educational software and services.",
+  description: "Review the Terms of Service governing use of EmeritaClinical™ educational software and services.",
 }
 
-const effectiveDate = "November 18, 2025"
-const lastUpdated = "November 18, 2025"
+const effectiveDate = "December 3, 2025"
+const lastUpdated = "December 3, 2025"
 
 export default function TermsPage() {
   return (
     <div className="container mx-auto max-w-4xl space-y-10 px-4 py-12 md:px-6">
       <header className="space-y-2 text-center">
-        <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">WebConnect360 LLC</p>
+        <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">EmeritaClinical™</p>
         <h1 className="text-4xl font-bold">Terms of Service</h1>
         <p className="text-muted-foreground">
           Effective Date: {effectiveDate} · Last Updated: {lastUpdated}
@@ -50,7 +50,7 @@ export default function TermsPage() {
       <section className="space-y-4 rounded-3xl border border-white/10 bg-card/50 p-8 shadow-xl">
         <h2 className="text-2xl font-semibold">5. Intellectual Property</h2>
         <p className="text-muted-foreground">
-          All platform content—including text, scenarios, quizzes, graphics, logos, documentation, and software—is the property of WebConnect360 LLC and protected by copyright. Users may not copy or redistribute proprietary content, use the material to create competing products, or extract large sets of questions, chapters, or flashcards.
+          All platform content—including text, scenarios, quizzes, graphics, logos, documentation, and software—is the property of EmeritaClinical™ and protected by copyright. Users may not copy or redistribute proprietary content, use the material to create competing products, or extract large sets of questions, chapters, or flashcards.
         </p>
       </section>
 
@@ -90,7 +90,7 @@ export default function TermsPage() {
       <section className="space-y-4 rounded-3xl border border-white/10 bg-card/50 p-8 shadow-xl">
         <h2 className="text-2xl font-semibold">11. Contact Us</h2>
         <p className="text-muted-foreground">
-          For questions or concerns, email <a href="mailto:support@webconnect360.com" className="underline">support@webconnect360.com</a> or contact WebConnect360 LLC.
+          For questions or concerns, email <a href="mailto:support@emeritaclinical.com" className="underline">support@emeritaclinical.com</a> or contact EmeritaClinical™ support.
         </p>
       </section>
     </div>

@@ -17,7 +17,7 @@ export default function MedicalDisclaimer() {
               programs. The information provided should not be used as a substitute for professional medical 
               advice, diagnosis, or treatment. Always follow your local protocols, medical director's orders, 
               and scope of practice. In case of a medical emergency, call 911 or your local emergency number 
-              immediately. By using EmeritaClinical™ products, you acknowledge that webconnect360 and its affiliates 
+              immediately. By using EmeritaClinical™ products, you acknowledge that EmeritaClinical™ and its affiliates 
               are not liable for any actions taken based on the educational content provided. This platform 
               does not certify, license, or credential users as EMS providers.
             </p>

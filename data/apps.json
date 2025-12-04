@@ -72,6 +72,24 @@
     "bundleEligible": false
   },
   {
+    "id": "emeritacrm",
+    "name": "EmeritaClinical Research Management",
+    "shortName": "EmeritaCRM",
+    "tier": "core",
+    "status": "available",
+    "tagline": "Enterprise research management platform for clinical education programs.",
+    "description": "Comprehensive research administration system with participant tracking, compliance monitoring, and institutional analytics for clinical research programs.",
+    "badge": "Research Platform",
+    "features": [
+      "Participant management",
+      "Compliance tracking",
+      "Institutional dashboards",
+      "Research analytics"
+    ],
+    "previewLink": "https://emeritacrm.netlify.app",
+    "bundleEligible": false
+  },
+  {
     "id": "aemt",
     "name": "EmeritaClinical AEMT",
     "shortName": "AEMT",

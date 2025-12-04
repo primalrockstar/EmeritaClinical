@@ -82,10 +82,10 @@ export default function SuitePage() {
         <div className="container mx-auto flex flex-col items-center gap-6 px-4 text-center">
           <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground">EmeritaClinical™ Suite</p>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-            The WebConnect360 EMS ecosystem, now neon and Stripe-connected.
+            EmeritaClinical™: Enterprise Platforms for Clinical Education
           </h1>
-          <p className="max-w-3xl text-muted-foreground md:text-lg">
-            EMT-B Core, ChapterFlashEMT, and PCR Trainer PRO mirror the ProMedixEMS experience with $29 one-time Stripe checkouts. MedicationsEMS and the AEMT/Paramedic tracks stay on the same roadmap toward 2026 App Store and Google Play launches.
+          <p className="max-w-2xl text-lg text-muted-foreground md:text-xl">
+            EMT-B Core, ChapterFlashEMT, PCR Trainer PRO, and EmeritaCRM deliver professional-grade learning and research management with transparent $29 pricing. MedicationsEMS and the AEMT/Paramedic tracks continue development toward 2026 multi-platform releases.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Button asChild size="lg">
@@ -110,9 +110,9 @@ export default function SuitePage() {
       <section id="live-apps" className="container mx-auto space-y-8 px-4 md:px-6">
         <div className="space-y-2 text-center">
           <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground">Live + coming soon</p>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Every EMS tool, same pricing as WebConnect360.</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Professional EMS platforms with transparent pricing.</h2>
           <p className="mx-auto max-w-3xl text-muted-foreground md:text-lg">
-            These glass-card modules are the cash-flow engine: purchase-ready Stripe links for $29 apps plus transparent waitlists for what ships next.
+            Enterprise-grade educational tools with glassmorphism design. Purchase-ready platforms at $29 each with transparent roadmaps for upcoming releases.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -210,7 +210,7 @@ export default function SuitePage() {
           <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground">Pricing</p>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Professional grade. Honest pricing.</h2>
           <p className="mx-auto max-w-2xl text-muted-foreground md:text-lg">
-            Exactly what WebConnect360 published—single apps at $29, bundle at $36.75 with HOLIDAY25, and classroom plans on request.
+            Single EMS education apps at $29 each, 3-app bundle at $36.75 with HOLIDAY25, and enterprise licensing for institutions.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-3 items-stretch">

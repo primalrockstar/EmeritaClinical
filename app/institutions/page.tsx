@@ -32,7 +32,7 @@ export default function InstitutionsPage() {
               <li>Mention any LMS/compliance requirements</li>
             </ul>
             <Button asChild className="w-full">
-              <a href="mailto:demo@webconnect360.com">Email demo@webconnect360.com</a>
+              <a href="mailto:demo@emeritaclinical.com">Email demo@emeritaclinical.com</a>
             </Button>
             <p className="text-xs text-muted-foreground">
               Demos are reviewed within one business day. AEMT, Paramedic, and specialty tools will begin external pilots as soon as their web builds are classroom-ready.

@@ -47,26 +47,26 @@ export default function AppsPage() {
     <div className="flex flex-col gap-10 py-12">
       <section className="container mx-auto px-4 md:px-6">
         <div className="glass-card rounded-3xl border border-white/10 p-8 text-center">
-          <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground">Stripe-powered releases</p>
-          <h1 className="mt-4 text-4xl font-bold">EmeritaClinical™ EMS Apps</h1>
+          <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground">Enterprise platforms</p>
+          <h1 className="mt-4 text-4xl font-bold">EmeritaClinical™ Platform Suite</h1>
           <p className="mt-4 text-muted-foreground md:text-lg">
-            The exact ProMedixEMS lineup from WebConnect360 now lives here: EMT-B Core, ChapterFlashEMT, and PCR Trainer PRO—all $29 one-time purchases.
+            EmeritaClinical™ delivers professional-grade EMS education and research management platforms: EMT-B Core, ChapterFlashEMT, PCR Trainer PRO, and EmeritaCRM—available with transparent $29 pricing.
           </p>
           <p className="text-muted-foreground">
-            Built by EMT student Shaun Williamson with neon-glass polish, each module enhances accredited programs with flashcards, documentation labs, and competency-mapped drills.
+            Built with glassmorphism design and enterprise-grade features, each platform enhances accredited programs with competency-based learning, documentation practice, and analytics tools.
           </p>
           <p className="mt-4 text-muted-foreground">
-            MedicationsEMS, AEMT, and Paramedic experiences remain in development for coordinated App Store and Google Play launches in 2026.
+            MedicationsEMS, AEMT, and Paramedic platforms remain in development for coordinated multi-platform releases in 2026.
           </p>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
             <Button asChild>
               <a href="#apps-grid">Browse the suite</a>
             </Button>
             <Button asChild variant="outline" className="border-white/20">
-              <a href="mailto:demo@webconnect360.com">Request instructor preview</a>
+              <a href="https://emeritacrm.netlify.app" target="_blank" rel="noopener noreferrer">View EmeritaCRM</a>
             </Button>
           </div>
-          <p className="mt-4 text-sm text-muted-foreground">Not a replacement for accredited EMS education—built to enhance and support it.</p>
+          <p className="mt-4 text-sm text-muted-foreground">Professional tools designed to enhance accredited EMS education programs.</p>
         </div>
       </section>
 

@@ -38,7 +38,7 @@ type AppEntry = {
 }
 
 const appsData = apps as AppEntry[]
-const flagshipIds = new Set(["emt-b", "chapterflash-emt", "pcr-trainer-pro"])
+const flagshipIds = new Set(["emt-b", "chapterflash-emt", "pcr-trainer-pro", "emeritacrm"])
 const orderedApps = [
   ...appsData.filter((app) => flagshipIds.has(app.id)),
   ...appsData.filter((app) => !flagshipIds.has(app.id)),
@@ -83,7 +83,7 @@ const highlightPillars: Pillar[] = [
 
 const heroStats = [
   { value: "$29", label: "One-time per app" },
-  { value: "3", label: "Stripe-ready premium tools" },
+  { value: "4", label: "Enterprise-grade platforms" },
   { value: "2026", label: "AEMT + Paramedic roadmap" },
 ]
 
@@ -150,10 +150,10 @@ export default function Home() {
             </div>
             <div className="space-y-5">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                The WebConnect360 EMS suite, reimagined as EmeritaClinical™.
+                Enterprise Platforms for Clinical Education & Research
               </h1>
               <p className="max-w-2xl text-lg text-muted-foreground md:text-xl">
-                EMT-B Core, ChapterFlashEMT, and PCR Trainer PRO are live with $29 Stripe checkouts. MedicationsEMS, AEMT, and Paramedic tracks follow the same roadmap releasing across web, App Store, and Google Play.
+                EmeritaClinical™ delivers professional-grade learning platforms for EMS education. EMT-B Core, ChapterFlashEMT, and PCR Report Sim are available now with enterprise licensing options for institutions and programs.
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
@@ -181,10 +181,10 @@ export default function Home() {
               <CardHeader className="space-y-3">
                 <CardTitle className="flex items-center gap-2 text-xl">
                   <Sparkles className="h-5 w-5 text-primary" />
-                  Every app. One neon platform.
+                  Professional EMS Learning Platform
                 </CardTitle>
                 <CardDescription>
-                  Crafted alongside active EMS instructors so the official EmeritaClinical EMT logos lead learners through content that feels like the classroom, skills lab, and street.
+                  Designed in collaboration with active EMS instructors and program directors to deliver content that meets accreditation standards and prepares students for real-world clinical practice.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -238,7 +238,7 @@ export default function Home() {
             Professional-grade tools. Honest $29 pricing.
           </h2>
           <p className="mx-auto max-w-3xl text-muted-foreground md:text-lg">
-            Each EmeritaClinical™ app mirrors the WebConnect360 EMS lineup with the same curriculum, flashcards, and documentation labs—only now every purchase routes through our own Stripe links.
+            EmeritaClinical™ provides enterprise-grade educational tools with transparent pricing and lifetime access. No subscriptions, no hidden fees—just professional learning platforms built for EMS education.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -385,13 +385,13 @@ export default function Home() {
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-[0.5em] text-muted-foreground">About EmeritaClinical™</p>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                Modern EMS training built by EMT Shaun Williamson.
+                Professional Learning Platforms for EMS Education
               </h2>
               <p className="text-muted-foreground md:text-lg">
-                What began as a personal study tool during Shaun’s EMT-B training quickly evolved into a complete suite of apps designed to help EMS students and providers learn faster and perform with confidence. Our mission is simple: enhance EMS education—not replace it.
+                EmeritaClinical™ delivers enterprise-grade educational technology designed specifically for EMS programs, instructors, and students. Our platforms integrate seamlessly with accredited training programs to enhance learning outcomes and prepare students for certification success.
               </p>
               <p className="text-muted-foreground">
-                The growing EmeritaClinical™ suite includes study modules, medication companions, rhythm trainers, flashcard systems, documentation labs, and voice-note tools—all designed around real EMS workflows.
+                Built in collaboration with experienced EMS educators, our suite includes adaptive learning modules, competency-based assessments, clinical documentation practice, and analytics tools—all designed to support modern EMS education standards.
               </p>
             </div>
             <div className="space-y-4 rounded-2xl border border-white/10 p-6">

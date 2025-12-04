@@ -28,7 +28,7 @@ export default function CheckoutButton({ priceId, label = "Buy Now", className }
       if (data.url) {
         window.location.href = data.url
       } else {
-        alert("Unable to start checkout. Contact payments@webconnect360.com.")
+        alert("Unable to start checkout. Contact payments@emeritaclinical.com.")
       }
     } catch (e: any) {
       alert("Checkout error: " + e.message)

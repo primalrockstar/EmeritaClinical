@@ -129,32 +129,32 @@ export default function ContactPage() {
                         <CardTitle className="text-lg">Email Support</CardTitle>
                         <CardDescription className="mt-2">
                           General Inquiries: <br />
-                          <a href="mailto:hello@webconnect360.com" className="text-foreground hover:underline">
-                            hello@webconnect360.com
+                          <a href="mailto:hello@emeritaclinical.com" className="text-foreground hover:underline">
+                            hello@emeritaclinical.com
                           </a>
                         </CardDescription>
                         <CardDescription className="mt-2">
-                          Program Demos (EMT-B only): <br />
-                          <a href="mailto:demo@webconnect360.com" className="text-foreground hover:underline">
-                            demo@webconnect360.com
+                          Program Demos & Enterprise: <br />
+                          <a href="mailto:demo@emeritaclinical.com" className="text-foreground hover:underline">
+                            demo@emeritaclinical.com
                           </a>
                         </CardDescription>
                         <CardDescription className="mt-2">
                           Customer Support & Accounts: <br />
-                          <a href="mailto:support@webconnect360.com" className="text-foreground hover:underline">
-                            support@webconnect360.com
+                          <a href="mailto:support@emeritaclinical.com" className="text-foreground hover:underline">
+                            support@emeritaclinical.com
                           </a>
                         </CardDescription>
                         <CardDescription className="mt-2">
                           Technical Help: <br />
-                          <a href="mailto:tech@webconnect360.com" className="text-foreground hover:underline">
-                            tech@webconnect360.com
+                          <a href="mailto:tech@emeritaclinical.com" className="text-foreground hover:underline">
+                            tech@emeritaclinical.com
                           </a>
                         </CardDescription>
                         <CardDescription className="mt-2">
                           Payment Issues: <br />
-                          <a href="mailto:payments@webconnect360.com" className="text-foreground hover:underline">
-                            payments@webconnect360.com
+                          <a href="mailto:payments@emeritaclinical.com" className="text-foreground hover:underline">
+                            payments@emeritaclinical.com
                           </a>
                         </CardDescription>
                       </div>
@@ -211,7 +211,7 @@ export default function ContactPage() {
               <CardContent>
                 <p className="text-muted-foreground">
                   Yes! We provide personalized demos for training programs and institutions.
-                  Only the EMT-B Core experience is demo-ready today—email <a href="mailto:demo@webconnect360.com" className="underline">demo@webconnect360.com</a> with your program details and we&apos;ll coordinate a walkthrough.
+                  Our platforms are demo-ready—email <a href="mailto:demo@emeritaclinical.com" className="underline">demo@emeritaclinical.com</a> with your program details and we&apos;ll coordinate a walkthrough.
                 </p>
               </CardContent>
             </Card>
@@ -221,7 +221,7 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Use hello@webconnect360.com for general questions, demo@webconnect360.com for EMT-B demos, support@webconnect360.com for account or subscription issues, tech@webconnect360.com for technical troubleshooting, and payments@webconnect360.com for billing.
+                  Use hello@emeritaclinical.com for general questions, demo@emeritaclinical.com for enterprise demos, support@emeritaclinical.com for account issues, tech@emeritaclinical.com for technical troubleshooting, and payments@emeritaclinical.com for billing.
                 </p>
               </CardContent>
             </Card>

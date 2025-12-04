@@ -124,7 +124,7 @@ export default function AboutPage() {
                     <Link href="/suite">Explore the suite</Link>
                   </Button>
               <Button asChild variant="outline" size="lg" className="border-white/30 px-8 text-base">
-                    <a href="mailto:demo@webconnect360.com" className="underline">Request an EMT-B demo</a>
+                    <a href="mailto:demo@emeritaclinical.com">Request a platform demo</a>
               </Button>
             </div>
           </div>
@@ -250,7 +250,7 @@ export default function AboutPage() {
                 <Link href="/contact">Join the waitlist</Link>
               </Button>
               <Button asChild variant="outline" className="border-white/30">
-                <a href="mailto:demo@webconnect360.com">Request an EMT-B demo</a>
+                <a href="mailto:demo@emeritaclinical.com">Request a platform demo</a>
               </Button>
             </div>
           </CardContent>
