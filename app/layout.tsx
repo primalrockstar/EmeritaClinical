@@ -8,8 +8,8 @@ import { Footer } from "@/components/footer";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Coming Soon",
-  description: "We're building something new.",
+  title: "THE RIG + ROOT - Choose Your Platform",
+  description: "Two powerful platforms for different needs. THE RIG for enterprise scale, ROOT for organic growth. Find the perfect platform for your journey.",
 };
 
 export default function RootLayout({
